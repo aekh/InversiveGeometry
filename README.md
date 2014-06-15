@@ -1,4 +1,4 @@
 InversiveGeometry
 =================
 
-Simple program to graphically represent inversive geometry.
+Simple program with interactive features to graphically represent inversive geometry.

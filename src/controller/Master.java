@@ -1,9 +1,9 @@
-package master;
+package controller;
 
-import backend.Circle;
-import backend.Point;
-import frontend.Input;
-import frontend.Output;
+import model.Circle;
+import model.Point;
+import view.Input;
+import view.Output;
 
 /**
  * Master loop

@@ -1,4 +1,4 @@
-package frontend;
+package view;
 
 import java.io.*;
 import java.awt.MouseInfo; 
@@ -54,11 +54,11 @@ public class Input implements KeyListener {
 	
 	// === Misc. Methods === //
 	
-	public backend.Point readPoint(javax.swing.JFrame frame) {
+	public model.Point readPoint(javax.swing.JFrame frame) {
 		Point mouse = frame.getMousePosition();
 		if(mouse == null) {
 			mouse = new Point(0, 0);
-		} return new backend.Point(mouse.x, mouse.y - 24);
+		} return new model.Point(mouse.x, mouse.y - 24);
 	}
 	
 	@Override

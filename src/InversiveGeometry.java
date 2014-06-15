@@ -5,7 +5,7 @@
  */
 public class InversiveGeometry {
 	public static void main(String[] args) {
-		master.Master master = new master.Master();
+		controller.Master master = new controller.Master();
 		master.run();
 	}
 }

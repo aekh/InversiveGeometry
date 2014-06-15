@@ -1,4 +1,4 @@
-package frontend;
+package view;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -17,7 +17,7 @@ public class Output extends JPanel{
 	// === Fields === //
 	
 	private static final long serialVersionUID = 6343688028943429454L;
-	private LinkedList<backend.Point> objects;
+	private LinkedList<model.Point> objects;
 	public JFrame frame;
 	
 	// === Constructors === //
@@ -41,12 +41,12 @@ public class Output extends JPanel{
 	// === Mutators === //
 	
 	/** @param object Object to add to render list */
-	public void addObject(backend.Point object) {
+	public void addObject(model.Point object) {
 		synchronized(objects) {
 			objects.add(object);
 			}
 		}
-	public void remObject(backend.Point object) {
+	public void remObject(model.Point object) {
 		synchronized(objects) {
 			objects.remove(object);
 			}
@@ -68,7 +68,7 @@ public class Output extends JPanel{
 			g.setColor(new Color(200,200,200,255));
 			g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
 			for (int i = 0; i < objects.size(); i++) {
-				backend.Point p = objects.get(i);
+				model.Point p = objects.get(i);
 				p.render(g);
 			}
 			g.setColor(new Color(0, 50, 110, 255));

@@ -23,7 +23,7 @@ public class Output extends JPanel{
 	// === Constructors === //
 	
 	public Output(java.awt.event.KeyListener input) {
-		frame = new JFrame("SpaceExplorer");
+		frame = new JFrame("Inversive Geometry");
 		frame.pack();
 		frame.add(this);
 		frame.addKeyListener(input);
@@ -71,6 +71,11 @@ public class Output extends JPanel{
 				backend.Point p = objects.get(i);
 				p.render(g);
 			}
+			g.setColor(new Color(0, 50, 110, 255));
+			g.drawString("Space: Attach shape(s)", 10, 20);
+			g.drawString("C: Create cirlce", 10, 35);
+			g.drawString("V: Create cirlce of inversion", 10, 50);
+			g.drawString("R: Clear screen", 10, 65);
 		}
 	}
 }
